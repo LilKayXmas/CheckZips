@@ -1,0 +1,26 @@
+using System;
+using static System.Console;
+class CheckZips
+{
+   static void Main()
+   {
+      string[] zips = {"12789", "54012", "54481", "54982", "60007",
+         "60103", "60187", "60188", "71244", "90210"};
+      // Write your main here
+  int zip;
+
+      Write("Enter a zip code: ");
+      zip = Convert.ToInt32(Console.ReadLine());
+
+      for(int i = 0; i < zips.Length; i++)
+      {
+         if(zip == zips[i])
+         {
+            WriteLine("Delivery is available to zip code " + zip);
+            return;
+         }
+      }
+
+      WriteLine("Delivery is not available to zip code " + zip);
+   }
+}
